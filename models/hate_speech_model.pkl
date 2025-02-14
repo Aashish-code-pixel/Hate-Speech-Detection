@@ -1,0 +1,15 @@
+import joblib
+
+# Save trained model
+joblib.dump(model, "models/hate_speech_model.pkl")
+print("Model saved successfully.")
+
+
+import joblib
+
+# Load saved model
+model = joblib.load("models/hate_speech_model.pkl")
+
+# Use model for predictions
+prediction = model.predict(["example text"])
+print("Prediction:", prediction)
