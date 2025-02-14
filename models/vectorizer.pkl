@@ -1,0 +1,9 @@
+joblib.dump(vectorizer, "models/vectorizer.pkl")
+
+import joblib
+
+# Load vectorizer
+vectorizer = joblib.load("models/vectorizer.pkl")
+
+# Convert text into numerical features
+text_tfidf = vectorizer.transform(["example text"])
